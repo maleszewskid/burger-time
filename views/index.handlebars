@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="jumbotron">
+
+		<div class="text-center">
+			<h1 class="text-center">Burger Time!</h1>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center enter_section">
+				<h3>Add a burger!</h3>
+				<br>
+				<form action="/burgers/create" method="POST" id="submit">
+					<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
+					<br>
+					<button type="submit" class="btn btn-primary" id="text-enter-button">SUMBIT BURGER</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<br>
+<br>
+
+<div class="container">
+	<div class="row">
+		<div class="col text-center">
+			<h2>Burgers Left:</h2>
+			<ul class="unstyled">
+				{{#each burgers}}
+				{{#unless this.eaten}}
+				{{> burgers/burger-block eaten=false}}
+				{{/unless}}
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="col text-center">
+			<h2>Eaten Burgers:</h2>
+			<ul class="unstyled">
+				{{#each burgers}}
+				{{#if eaten}}
+				{{> burgers/burger-block eaten=true}}
+				{{/if}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</div>

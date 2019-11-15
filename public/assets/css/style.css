@@ -1,0 +1,21 @@
+.jumbotron {
+    background-color: lightgreen;
+}
+
+h1,
+h3 {
+    color: darkgreen;
+}
+
+h2 {
+    color: black;
+    border-bottom: solid 5px darkgreen;
+}
+
+body {
+    background-color: lightgreen;
+}
+
+p {
+    color: darkgreen;
+}
