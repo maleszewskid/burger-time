@@ -9,9 +9,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dmaleszewski/burger-time.git"
+        "url": "git+https://github.com/maleszewskid/burger-time.git"
     },
-    "author": "dmaleszewski",
+    "author": "maleszewskid",
     "license": "ISC",
     "homepage": "",
     "dependencies": {
