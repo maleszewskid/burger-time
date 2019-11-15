@@ -8,7 +8,7 @@ function questionMark(num) {
     return arr.toString();
 }
 
-function sumbitSql(ob) {
+function objToSql(ob) {
     var arr = [];
     for (var key in ob) {
         arr.push(key + "=" + ob[key]);
@@ -26,18 +26,18 @@ var orm = {
         });
     },
     create: function(table, cols, vals, cb) {
-        var query = "INSERT INTO " + table;
+        var queryS = "INSERT INTO " + table;
 
-        query += " (";
-        query += cols.toString();
-        query += ") ";
-        query += "VALUES (";
-        query += questionMark(vals.length);
-        query += ") ";
+        queryS += " (";
+        queryS += cols.toString();
+        queryS += ") ";
+        queryS += "VALUES (";
+        queryS += questionMark(vals.length);
+        queryS += ") ";
 
         console.log(query);
 
-        connection.query(query, vals, function(err, result) {
+        connection.query(queryS, vals, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -45,15 +45,15 @@ var orm = {
         });
     },
     update: function(table, objColVals, condition, cb) {
-        var query = "UPDATE " + table;
+        var queryS = "UPDATE " + table;
 
-        query += " SET ";
-        query += sumbitSql(objColVals);
-        query += " WHERE ";
-        query += condition;
+        queryS += " SET ";
+        queryS += objToSql(objColVals);
+        queryS += " WHERE ";
+        queryS += condition;
 
         console.log(query);
-        connection.query(query, function(err, result) {
+        connection.query(queryS, function(err, result) {
             if (err) {
                 throw err;
             }
