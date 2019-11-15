@@ -1,23 +1,20 @@
 {
-    "name": "burger-time",
+    "name": "burgertime",
     "version": "1.0.0",
-    "description": "burger application",
-    "main": "index.js",
+    "description": "application to find friends",
+    "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node server.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/maleszewskid/burger-time.git"
-    },
     "author": "maleszewskid",
     "license": "ISC",
+    "bugs": {
+        "url": ""
+    },
     "homepage": "",
     "dependencies": {
         "express": "^4.17.1",
-        "express-handlebars": "^3.1.0",
-        "mysql": "^2.17.1"
-    },
-    "devDependencies": {}
+        "path": "^0.12.7"
+    }
 }
