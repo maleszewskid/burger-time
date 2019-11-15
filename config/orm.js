@@ -26,18 +26,18 @@ var orm = {
         });
     },
     create: function(table, cols, vals, cb) {
-        var queryS = "INSERT INTO " + table;
+        var queryString = "INSERT INTO " + table;
 
-        queryS += " (";
-        queryS += cols.toString();
-        queryS += ") ";
-        queryS += "VALUES (";
-        queryS += questionMark(vals.length);
-        queryS += ") ";
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += questionMark(vals.length);
+        queryString += ") ";
 
         console.log(query);
 
-        connection.query(queryS, vals, function(err, result) {
+        connection.query(queryString, vals, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -45,15 +45,15 @@ var orm = {
         });
     },
     update: function(table, objColVals, condition, cb) {
-        var queryS = "UPDATE " + table;
+        var queryString = "UPDATE " + table;
 
-        queryS += " SET ";
-        queryS += objToSql(objColVals);
-        queryS += " WHERE ";
-        queryS += condition;
+        queryString += " SET ";
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
 
         console.log(query);
-        connection.query(queryS, function(err, result) {
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
