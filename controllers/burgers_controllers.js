@@ -11,7 +11,7 @@ router.get("/", function(req, res) {
         res.render("index", hbsObject)
     });
 });
-router.post("/burgers/create", function(req, res) {
+router.post("/api/burgers", function(req, res) {
     burger.create(req.body.burger_name, function(result) {
         console.log(result);
         res.redirect("/")
