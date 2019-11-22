@@ -1,15 +1,15 @@
 .jumbotron {
-    font-size: 45px;
+    font-size: 55px;
     color: black;
-    font-weight: bold;
+    font-weight: bolder;
     background-image: url("https://cdn4.vectorstock.com/i/1000x1000/30/18/delicious-hamburger-fast-food-meal-background-vector-14993018.jpg");
 }
 
 h1,
 h3 {
     color: white;
-    font-weight: bold;
-    font-size: 30px;
+    font-weight: bolder;
+    font-size: 55px;
     
 }
 
