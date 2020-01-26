@@ -15,7 +15,6 @@ $(document).ready(function () {
       location.reload();
     });
   });
-
   $("#eat").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
@@ -23,7 +22,6 @@ $(document).ready(function () {
     var newState = {
       eaten: 1
     }
-
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newState
