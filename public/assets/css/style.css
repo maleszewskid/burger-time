@@ -4,26 +4,21 @@
     font-weight: bolder;
     background-image: url("https://cdn4.vectorstock.com/i/1000x1000/30/18/delicious-hamburger-fast-food-meal-background-vector-14993018.jpg");
 }
-
 h1,
 h3 {
     color: white;
     font-weight: bolder;
     font-size: 55px;
-    
 }
-
 h2 {
     color: white;
     font-size: 30px;
     font-weight: bold;
     border-bottom: solid 5px black;
 }
-
 body {
     background-image: url("https://cdn2.vectorstock.com/i/1000x1000/31/81/seamless-pattern-of-burger-with-yellow-background-vector-22703181.jpg");
 }
-
 p {
     color: white;
     font-size 30px;
