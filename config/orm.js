@@ -1,5 +1,4 @@
 var connection = require("../config/connection");
-
 function printQuestionMarks(num) {
     var arr = [];
     for (var i = 0; i < num; i++) {
@@ -7,7 +6,6 @@ function printQuestionMarks(num) {
     }
     return arr.toString();
 }
-
 function objToSQL(ob) {
     var arr = [];
     for (var key in ob) {
@@ -21,7 +19,6 @@ function objToSQL(ob) {
     }
     return arr.toString();
 }
-
 var orm = {
     all: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
@@ -39,7 +36,6 @@ var orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
-        console.log(queryString);
         connection.query(queryString, vals, function (err, result) {
             if (err) {
                 throw err;
@@ -47,7 +43,6 @@ var orm = {
             cb(result);
         });
     },
-
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
@@ -64,5 +59,4 @@ var orm = {
         });
     }
 };
-
 module.exports = orm;
