@@ -7,8 +7,6 @@ $(document).ready(function () {
       name: $("#add").val(),
       eaten: 0
     }
-
-    console.log(newBurger);
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
