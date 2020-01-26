@@ -10,7 +10,7 @@ app.use('/public', express.static(path.join(__dirname + '/public')));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
-// Set Handlebars.
+
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main"}));
