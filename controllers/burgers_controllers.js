@@ -19,7 +19,6 @@ router.post("/api/burgers", function(req, res) {
 })
 router.put("/api/burgers/:id", function (req, res) {
   var condition = req.params.id;
-
   burger.update(condition, function (result) {
     if (result.affectedRows == 0) {
       return res.status(404).end();
@@ -28,5 +27,4 @@ router.put("/api/burgers/:id", function (req, res) {
     }
   });
 });
-
 module.exports = router;
